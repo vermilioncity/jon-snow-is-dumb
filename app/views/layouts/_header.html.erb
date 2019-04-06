@@ -1,0 +1,31 @@
+<div class="jumbotron-fluid">
+  <p id="header" class="text-center text-truncate">JON SNOW IS DUMB</p>
+  <p id="addendum" class="text-center text-truncate">(and so is the rest of his family)</p>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <%= link_to "HOME", root_path, class: "nav-link"%>
+      </li>
+      <li class="nav-item">
+        <%= link_to "ABOUT", about_path, class: "nav-link"%>
+      </li>
+      <li class="nav-item">
+        <%= link_to "PROJECTS", projects_path, class: "nav-link"%>
+      </li>
+      <li class="nav-item">
+        <%= link_to "LOG-IN", login_path, class: "nav-link"%>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0" id="search-bar">
+      <input id="search-input" class="form-control mr-sm-2" type="search" placeholder="SEARCH STUFF" aria-label="SEARCH STUFF">
+      <button id="search-button" class="btn btn-outline-dark my-2 my-sm-0" type="submit">SEARCH</button>
+    </form>
+  </div>
+</nav>
+

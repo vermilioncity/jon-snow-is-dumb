@@ -1,0 +1,25 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.blog-post-content {
+  margin-top: 10px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 80%;
+}
+
+article > div > h1 {
+  margin-top: 20px;
+  line-height: 45px;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 6.0vw;
+}
+
+#page-content {
+  margin: 20px;
+}
+
+img {
+  height: 20px;
+  width: 30%;
+  padding: 0;
+}
