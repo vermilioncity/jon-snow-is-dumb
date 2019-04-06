@@ -9,18 +9,31 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
+
       <li class="nav-item">
         <%= link_to "HOME", root_path, class: "nav-link"%>
       </li>
+
       <li class="nav-item">
         <%= link_to "ABOUT", about_path, class: "nav-link"%>
       </li>
+
       <li class="nav-item">
         <%= link_to "PROJECTS", projects_path, class: "nav-link"%>
       </li>
-      <li class="nav-item">
-        <%= link_to "LOG-IN", login_path, class: "nav-link"%>
-      </li>
+
+      <% if logged_in? %>
+        <li class="nav-item">
+          <%= link_to "PROFILE", user_path(current_user), class: "nav-link"%>
+        </li>
+        <li class="nav-item">
+          <%= link_to "LOG-OUT", logout_path, method: :delete, class: "nav-link"%>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to "LOG-IN", login_path, class: "nav-link"%>
+        </li>
+      <%end %>
     </ul>
     <form class="form-inline my-2 my-lg-0" id="search-bar">
       <input id="search-input" class="form-control mr-sm-2" type="search" placeholder="SEARCH STUFF" aria-label="SEARCH STUFF">

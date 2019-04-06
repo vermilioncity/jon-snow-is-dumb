@@ -17,4 +17,12 @@ class User < ApplicationRecord
                       message: 'Username must contain only letters, numbers or underscores'}
 
   has_secure_password
+
+  def User.digest(string)
+
+    cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST : BCrypt::Engine.cost
+
+    BCrypt::Password.create(string, cost: cost)
+  end
+
 end
