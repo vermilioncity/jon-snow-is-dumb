@@ -3,10 +3,8 @@
 <h1>Log in</h1>
 
 <div class=container id="signup">
-  <div class="col-md-6 col-md-offset-3">
-    <div class="row">
-
-      <div class="col">
+    <div class="row inner">
+      <div class="col-md-6">
 
         <%= form_for(:session, url: login_path) do |f| %>
 
@@ -16,15 +14,23 @@
           <%= f.label :password %>
           <%= f.password_field :password, class: 'form-control' %>
 
+          <%= f.label :remember_me, class: "checkbox inline", id: "checkbox" do %>
+
+            <%= f.check_box :remember_me %>
+
+          <% end %>
+          <div id="checkbox-label"> Remember me on this computer </div>
+
           <%= f.submit "Login", class: "btn btn-primary", id: "account_button"%>
 
         <% end %>
+
+        <div id="signup_prompt">
+          <p>No account?  Click <%= link_to "here", signup_path %> to sign up!</p>
+        </div>
 
       </div>
 
     </div>
   </div>
-</div>
-<div id="signup_prompt">
-  <p>No account?  Click <%= link_to "here", signup_path %> to sign up!</p>
 </div>

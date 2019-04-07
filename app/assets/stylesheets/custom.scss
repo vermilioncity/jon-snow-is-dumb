@@ -33,13 +33,9 @@ $gray-medium-light: #eaeaea;
 
 #signup {
 
-  width: 60%;
-
-  #signup_button {
-    margin-top: 15px;
-    width: 50%;
-    margin-left: 25%;
-    margin-right: 25%;
+  .inner {
+    display: flex;
+    justify-content: center;
   }
 
   input, textarea, select, .uneditable-input {
@@ -63,6 +59,30 @@ $gray-medium-light: #eaeaea;
     font-family: 'Open Sans', sans-serif;
   }
 
+  #checkbox-label {
+    margin-left: 20px;
+    font-weight: normal;
+    vertical-align: middle;
+    float: top;
+  }
+
+  .checkbox {
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+
+  #session_remember_me {
+    width: 5%;
+    float: left;
+    vertical-align: middle;
+    margin: 0px 0px 0px 0px !important;
+  }
+
+}
+
+#signup_prompt {
+  text-align: center;
+  margin-top: 5px;
 }
 
 #error_explanation {
@@ -83,11 +103,6 @@ $gray-medium-light: #eaeaea;
 
   }
 
-}
-
-#signup_prompt {
-  text-align: center;
-  margin-top: 15px;
 }
 
 /* titles */
