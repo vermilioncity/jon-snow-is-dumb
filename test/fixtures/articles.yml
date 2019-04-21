@@ -1,0 +1,13 @@
+test_article:
+  title: title
+  content: <%='content'*400 %>
+  created_at: <%= Time.zone.yesterday %>
+  updated_at: <%= Time.zone.now %>
+  user: test_user
+
+test_article2:
+  title: title2
+  content: <%='nope'*400 %>
+  created_at: <%= Time.zone.yesterday %>
+  updated_at: <%= Time.zone.now %>
+  user: test_user

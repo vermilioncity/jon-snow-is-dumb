@@ -2,9 +2,9 @@
 
 <h1>Log in</h1>
 
-<div class=container id="signup">
-    <div class="row inner">
-      <div class="col-md-6">
+<div class="container centered-form">
+    <div class="row">
+      <div class="offset-md-3 col-md-6">
 
         <%= form_for(:session, url: login_path) do |f| %>
 
@@ -12,25 +12,21 @@
           <%= f.text_field :username, class: 'form-control' %>
 
           <%= f.label :password %>
+          <%= link_to "(forgot password)", new_password_reset_path %>
           <%= f.password_field :password, class: 'form-control' %>
 
           <%= f.label :remember_me, class: "checkbox inline", id: "checkbox" do %>
-
             <%= f.check_box :remember_me %>
-
           <% end %>
           <div id="checkbox-label"> Remember me on this computer </div>
 
           <%= f.submit "Login", class: "btn btn-primary", id: "account_button"%>
-
         <% end %>
 
         <div id="signup_prompt">
           <p>No account?  Click <%= link_to "here", signup_path %> to sign up!</p>
         </div>
-
       </div>
-
     </div>
   </div>
 </div>

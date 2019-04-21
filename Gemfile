@@ -19,6 +19,12 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bcrypt', '3.1.12'
+gem "will_paginate", "3.1.7"
+gem "bootstrap-will_paginate", "1.0.0"
+gem "carrierwave",  "1.3.1"
+gem "mini_magick", "4.9.3"
+gem "fog", "2.1.0"
+gem 'simplecov', require: false, group: :test
 
 group :development, :test do
   gem 'sqlite3'

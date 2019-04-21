@@ -31,12 +31,7 @@ $gray-medium-light: #eaeaea;
 
 /* forms */
 
-#signup {
-
-  .inner {
-    display: flex;
-    justify-content: center;
-  }
+.centered-form {
 
   input, textarea, select, .uneditable-input {
 
@@ -55,7 +50,7 @@ $gray-medium-light: #eaeaea;
 
   }
 
-  input, label, #account_button {
+  input, label {
     font-family: 'Open Sans', sans-serif;
   }
 
@@ -109,9 +104,31 @@ $gray-medium-light: #eaeaea;
 body > div.container > h1 {
   text-align: center;
   font-family: 'Gloria Hallelujah', cursive;
+  margin-bottom: 10px;
 }
 
 p {
   font-family: 'Open Sans', sans-serif;
-  font-size: 0.9vw;
+  font-size: 12px;
+}
+
+/* images */
+.side-avatar {
+  float: left;
+  margin-right: 20px;
+  text-align: center;
+}
+
+/* pagination */
+.pagination {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.inner {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.panel-body {
+  padding-bottom: 0px!important
 }

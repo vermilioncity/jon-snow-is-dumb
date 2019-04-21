@@ -1,0 +1,12 @@
+<% @articles.each do |article| %>
+  <div class="row">
+    <%= render 'post', article: article, full_post: false %>
+  </div>
+<% end %>
+<%= will_paginate @articles %>
+
+<div class="col-xs-10 col-xs-offset-5">
+  <% if logged_in? && current_user.admin? %>
+  <%= link_to "Create new post", new_article_path %>
+  <% end %>
+</div>

@@ -24,7 +24,7 @@
 
       <% if logged_in? %>
         <li class="nav-item">
-          <%= link_to "PROFILE", user_path(current_user), class: "nav-link"%>
+          <%= link_to "PROFILE", edit_user_path(current_user), class: "nav-link"%>
         </li>
         <li class="nav-item">
           <%= link_to "LOG-OUT", logout_path, method: :delete, class: "nav-link"%>
@@ -35,10 +35,12 @@
         </li>
       <%end %>
     </ul>
-    <form class="form-inline my-2 my-lg-0" id="search-bar">
-      <input id="search-input" class="form-control mr-sm-2" type="search" placeholder="SEARCH STUFF" aria-label="SEARCH STUFF">
-      <button id="search-button" class="btn btn-outline-dark my-2 my-sm-0" type="submit">SEARCH</button>
-    </form>
+    <%= form_with url: articles_path, class: "form-inline my-2 my-lg-0", id: "search-bar", local:true, method: :get do |f| %>
+      <%= f.text_field params[:search], name: 'search', class: "form-control mr-sm-2", id: "search-input",
+                         placeholder: "SEARCH STUFF" %>
+      <%= f.submit value: "Search", name: "commit", id: "search-button", class: "btn btn-outline-dark my-2 my-sm-0",
+                   data: { disable_with: "Search" }%>
+    <% end %>
   </div>
 </nav>
 

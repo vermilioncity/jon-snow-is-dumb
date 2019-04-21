@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_06_205532) do
+ActiveRecord::Schema.define(version: 2019_04_16_002059) do
+
+  create_table "articles", force: :cascade do |t|
+    t.string "title"
+    t.text "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer "users_id"
+    t.integer "user_id"
+    t.index ["created_at"], name: "index_articles_on_user_id_and_created_at"
+    t.index ["user_id"], name: "index_articles_on_user_id"
+    t.index ["users_id"], name: "index_articles_on_users_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email"
@@ -19,6 +31,13 @@ ActiveRecord::Schema.define(version: 2019_04_06_205532) do
     t.string "password_digest"
     t.string "username"
     t.string "remember_digest"
+    t.boolean "admin"
+    t.string "activation_digest"
+    t.boolean "activated", default: false
+    t.datetime "activated_at"
+    t.string "reset_digest"
+    t.datetime "reset_sent_at"
+    t.string "avatar"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["username"], name: "index_users_on_username", unique: true
   end

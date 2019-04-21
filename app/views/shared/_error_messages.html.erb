@@ -1,12 +1,16 @@
-<% if @user.errors.any? %>
-  <div id="error_explanation">
-    <div class="alert alert-danger">
-      The form contains <%= pluralize(@user.errors.count, "error") %>.
+<% if obj.errors.any? %>
+  <div class="panel panel-danger">
+    <div class="panel-heading">
+      <h2 class="panel-title">
+        <%= pluralize(obj.errors.count, "error") %> must be resolved to proceed:
+      </h2>
+      <div class="panel-body">
+        <ul>
+          <% obj.errors.full_messages.each do |msg|%>
+            <li><%= msg.humanize %></li>
+          <% end %>
+        </ul>
+      </div>
     </div>
-    <ul>
-      <% @user.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-    </ul>
   </div>
 <% end %>
