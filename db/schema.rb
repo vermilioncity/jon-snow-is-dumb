@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2019_04_25_020702) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer "user_id"
-    t.index ["created_at"], name: "index_articles_on_user_id_and_created_at"
+    t.index ["user_id", "created_at"], name: "index_articles_on_user_id_and_created_at"
     t.index ["user_id"], name: "index_articles_on_user_id"
   end
 
