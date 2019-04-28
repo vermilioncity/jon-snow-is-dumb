@@ -17,6 +17,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails', "4.3.3"
 gem 'invisible_captcha'
 gem "mini_magick", "4.9.3"
+gem 'mini_racer', platforms: :ruby
+gem 'pg', '1.1.4'
 gem 'popper', '0.5.0'
 gem 'puma', '~> 3.11'
 gem 'rails', '~> 5.2.2', '>= 5.2.2.1'
@@ -25,11 +27,10 @@ gem 'simplecov', require: false, group: :test
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
 gem "will_paginate", "3.1.7"
-gem 'mini_racer', platforms: :ruby
+
 
 
 group :development, :test do
-  gem 'sqlite3'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
@@ -48,10 +49,6 @@ group :test do
   gem 'minitest-reporters',       '1.3.6'
   gem 'rails-controller-testing', '1.0.4'
   gem 'selenium-webdriver'
-end
-
-group :production do
-  gem 'pg', '1.1.4'
 end
 
 
