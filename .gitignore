@@ -32,6 +32,10 @@
 
 /.idea/*coverage
 /.idea/*
+
+# app stuff
+/.public/*
+
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
