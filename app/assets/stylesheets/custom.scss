@@ -117,6 +117,7 @@ p {
   float: left;
   margin-right: 20px;
   text-align: center;
+  font-family: 'Gloria Hallelujah', cursive;
 }
 
 /* pagination */
@@ -131,4 +132,10 @@ p {
 
 .panel-body {
   padding-bottom: 0px!important
+}
+
+/* links */
+.delete-link {
+  font-family: 'Gloria Hallelujah', cursive;
+  margin-left: 2px;
 }

@@ -19,4 +19,12 @@ class ApplicationController < ActionController::Base
       @user = User.find(params[:id])
       redirect_to(root_url) unless current_user?(@user)
     end
+
+    def correct_user_or_admin
+      @user = User.find_by(id: session[:user_id])
+      unless correct_user_or_admin?(@user)
+        flash[:warning] = "Insufficient permissions to do this action"
+      end
+    end
+
 end

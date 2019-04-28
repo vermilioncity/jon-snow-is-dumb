@@ -17,6 +17,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
+    results = instance_variable_get("@#{controller_name.singularize}")
   end
 
   def edit
