@@ -9,5 +9,5 @@
   dreams and adventures awaits! Let's go!
 </p>
 <p>
-  <%= link_to "Activate your account", edit_account_activation_url(@user.activation_token, email: @user.email) %>
+  <%= link_to "Activate your account", edit_account_activation_path(@user.activation_token, email: @user.email) %>
 </p>
