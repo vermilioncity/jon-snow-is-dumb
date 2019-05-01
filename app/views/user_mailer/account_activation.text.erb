@@ -4,5 +4,4 @@ Hello there!  Welcome to jonsnowisdumb.com!  This site hosts some blog posts abo
 
 That's right!  You signed up for the site! <%= @user.username.upcase %>! Your very own legend is about to unfold! A world of dreams and adventures awaits! Let's go!
 
-<%= edit_account_activation_path(@user.activation_token, email: @user.email) %>
-
+<%= edit_account_activation_url(@user.activation_token, email: @user.email) %>
