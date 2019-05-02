@@ -14,6 +14,10 @@ Rails.application.routes.draw do
 
   post '/edit', to: 'users#edit'
 
+  get "/404", to: "errors#not_found"
+  get "/422", to: "errors#unacceptable"
+  get "/500", to: "errors#internal_error"
+
   resources :users, only: [:new, :create, :edit, :update, :index, :destroy]
   resources :account_activations, only: [:edit]
   resources :password_resets, only:[:new, :create, :edit, :update]
