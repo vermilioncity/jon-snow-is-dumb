@@ -2,7 +2,7 @@ module UsersHelper
   def avatar_for(user, options = { size: 80 })
 
     size = options[:size]
-    default_image = image_url('viserys-150')
+    default_image = image_url('viserys-150.png')
 
     if user
       avatar_url = user.avatar.url || default_image
