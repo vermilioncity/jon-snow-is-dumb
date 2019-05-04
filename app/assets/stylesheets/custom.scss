@@ -139,3 +139,9 @@ p {
   font-family: 'Gloria Hallelujah', cursive;
   margin-left: 2px;
 }
+
+html, body {
+  margin: 0;
+  width: 100%;
+  min-width: 100vw;
+}

@@ -1,8 +1,11 @@
 class PictureUploader < CarrierWave::Uploader::Base
-  include CarrierWaveDirect::Uploader
 
-  def filename
-    "#{user.id}/avatar.#{model.image.file.extension}"
+  'def filename
+    "#{model.id}/avatar.#{model.avatar.file.extension}"
+  end'
+
+  def store_dir
+    "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}/"
   end
 
   def extension_whitelist
