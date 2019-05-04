@@ -10,6 +10,7 @@ CarrierWave.configure do |config|
     }
     config.fog_directory  = ENV['S3_BUCKET']
     config.fog_public = true
+    config.storage = :fog
   else
     config.storage = :file
     config.enable_processing = Rails.env.development?
