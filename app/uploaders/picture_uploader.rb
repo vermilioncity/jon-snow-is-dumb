@@ -2,7 +2,7 @@ class PictureUploader < CarrierWave::Uploader::Base
   include CarrierWaveDirect::Uploader
 
   def filename
-    "#{user.id}/#{model.randomstring}.#{model.image.file.extension}"
+    "#{user.id}/avatar.#{model.image.file.extension}"
   end
 
   def extension_whitelist
