@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+git_source(:github) { |repo| 'https://github.com/#{repo}.git' }
 
 ruby '2.6.2'
 
@@ -9,14 +9,15 @@ gem 'autoprefixer-rails'
 gem 'bcrypt', '3.1.12'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap-sass', '3.3.7'
-gem "bootstrap-will_paginate", "1.0.0"
-gem "carrierwave",  "1.3.1"
+gem 'bootstrap-will_paginate', '1.0.0'
+gem 'carrierwave',  '1.3.1'
+gem 'carrierwave_direct', '2.1.0'
 gem 'coffee-rails', '~> 4.2'
-gem "fog-aws", "3.5.0"
+gem 'fog-aws', '3.5.0'
 gem 'jbuilder', '~> 2.5'
-gem 'jquery-rails', "4.3.3"
+gem 'jquery-rails', '4.3.3'
 gem 'invisible_captcha'
-gem "mini_magick", "4.9.3"
+gem 'mini_magick', '4.9.3'
 gem 'mini_racer', platforms: :ruby
 gem 'pg', '1.1.4'
 gem 'popper', '0.5.0'
@@ -26,7 +27,7 @@ gem 'sassc', '2.0.1'
 gem 'simplecov', require: false, group: :test
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
-gem "will_paginate", "3.1.7"
+gem 'will_paginate', '3.1.7'
 
 
 
