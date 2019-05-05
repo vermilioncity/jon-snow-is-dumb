@@ -1,4 +1,4 @@
-ruby '2.6.2'
+ruby '2.6.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 
@@ -25,6 +25,7 @@ gem 'simplecov', require: false, group: :test
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
 gem 'will_paginate', '3.1.7'
+gem 'rack-cors', :require => 'rack/cors'
 
 
 
