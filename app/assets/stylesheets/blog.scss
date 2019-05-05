@@ -1,0 +1,109 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.post {
+  list-style: none;
+  #post-header {
+    display: inline;
+    font-family: 'Gloria Hallelujah', cursive;
+    padding-bottom: 20px;
+
+    #post-title {
+      float: left;
+      font-size: 30px;
+    }
+
+    #post-date {
+      float: right;
+      font-size: 15px;
+      padding-top: 20px;
+    }
+
+  }
+  #content {
+    margin-top: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 80%;
+  }
+}
+
+.post-links {
+  font-family: 'Gloria Hallelujah', cursive;
+  margin-bottom: 5px;
+}
+
+//shamelessly stolen from orac's Respectful Insolence blog.  I HATE CSS :( :( :( :(
+
+.comment-list>li {
+  list-style-type: none;
+  border-bottom: solid 1px #ccc;
+  padding-bottom: 1%;
+}
+
+.comment-list, .comment-list li {
+  margin: 0;
+  counter-reset: li;
+  padding-left: 0;
+}
+
+.comment-block {
+  margin-top: 5px;
+  img {
+    width: 6%;
+    height: auto;
+    margin-right: 1%;
+  }
+}
+.comment-wrap {
+  display: inline-block;
+  width: 92%;
+  vertical-align: top;
+
+  .comment-info {
+    display: flex;
+    margin-bottom: 1%;
+
+    .comment-cite {
+      color: #2E2F30;
+      font-style: normal;
+      width: 50%;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 1;
+      font-family: 'Gloria Hallelujah', cursive;
+      text-align: left;
+    }
+
+    .comment-time {
+      color: #2E2F30;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 400;
+      vertical-align: top;
+      font-family: 'Gloria Hallelujah', cursive;
+      text-align: right;
+      width: 50%;
+    }
+  }
+
+  .comment-content {
+    font-size: 12px;
+    overflow-wrap: break-word;
+  }
+}
+
+
+.comment-container {
+
+    margin-bottom: 10px;
+
+  #comment_body {
+    border-radius: 2px;
+    width: 100%;
+    border-color: #ccc;
+    overflow:auto;
+    resize: none;
+    height: 50px;
+  }
+}

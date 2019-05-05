@@ -1,0 +1,83 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* banner */
+.jumbotron-fluid {
+  background: image-url("jon-snow-banner.png") center center / cover no-repeat;
+  width: 100%;
+  height: 15vw;
+
+  #header {
+    font-size: 7.0vw;
+    font-family: 'Gloria Hallelujah', cursive;
+    color: white;
+    text-shadow: 1px 1px black;
+    padding-top: 2%;
+    letter-spacing: 1px;
+  }
+
+  #addendum {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.5vw;
+    color: black;
+    text-align: right;
+    padding-left: 70%;
+    margin-top: -2%;
+    text-shadow: 1px 1px white;
+  }
+}
+
+.navbar {
+  margin-bottom: 20px !important;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 20px;
+
+  a {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .navbar-nav > li > a {padding-top:5px !important; padding-bottom:5px !important;}
+  .navbar {min-height:25px !important}
+}
+
+/* search bar */
+
+#search-bar {
+  font-family: 'Gloria Hallelujah', cursive;
+  vertical-align: center;
+  padding: 5px;
+
+  ::-webkit-input-placeholder {
+    font-size: 13px;
+  }
+
+  :-moz-placeholder { /* Firefox 18- */
+    font-size: 13px;
+  }
+
+  ::-moz-placeholder {  /* Firefox 19+ */
+    font-size: 13px;
+  }
+
+  /* Overriding styles for search bar*/
+
+  ::-webkit-input-placeholder {
+    font-size: 13px!important;
+  }
+
+  :-moz-placeholder { /* Firefox 18- */
+    font-size: 13px!important;
+  }
+  ::-moz-placeholder {  /* Firefox 19+ */
+    font-size: 13px!important;
+  }
+}
+
+
+#search-button {
+  font-size: 17px;
+  padding: 6px 12px;
+  margin-left: 3px;
+}
+

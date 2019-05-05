@@ -1,0 +1,24 @@
+<% provide(:title, "Edit user") %>
+<% provide(:button_text, 'Update profile') %>
+<% provide(:path, user_path) %>
+<% provide(:object, @user) %>
+
+<h1>Update User Information</h1>
+
+
+<div class="container centered-form">
+  <div class="avatar_edit">
+    <%= avatar_for @user%>
+    <%= form_for(@user, html: { multipart: true, id: 'user_avatar_1'}) do |f| %>
+      <label class="avatar">
+        Upload avatar
+      <%= f.file_field :avatar, accept: 'image/jpeg,image/gif,image/png' %>
+    </label>
+    <% end %>
+  </div>
+  <div class="row">
+    <div class="offset-md-3 col-md-6">
+      <%= render 'form' %>
+    </div>
+  </div>
+</div>

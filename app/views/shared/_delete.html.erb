@@ -1,0 +1,4 @@
+<% if correct_user_or_admin?(yield(:user)) %>
+  <%= link_to "Delete", yield(:obj), method: :delete, class: "delete-link",
+                data: { confirm: "You sure?" } %>
+<% end %>

@@ -1,0 +1,28 @@
+<%= form_with model: Comment.new, url: [obj, Comment.new], class: "comment-container" do |f| %>
+  <%= f.text_area :body, placeholder: "Add a comment" %><br/>
+  <%= f.submit "Add Comment" %>
+<% end %>
+<ol class="comment-list">
+<% obj.comments.each do |comment| %>
+    <li class="comment even thread-even depth-1 clearfix" id=<%= "li-comment#{comment.id}" %>>
+      <div class="comment-block" id= <%="comment#{comment.id}" %> >
+        <%= avatar_for(comment.user, size: 50) %>
+        <div class="comment-wrap">
+          <div class="comment-info">
+            <cite class="comment-cite"> <%= comment_author(comment) %> </cite>
+            <div class="comment-time"><%= comment.created_at.strftime('%m/%d/%Y') %></div>
+          </div>
+          <div class="comment-content">
+            <%= comment.body %>
+          </div>
+        </div>
+      </div>
+      <div>
+        <% if correct_user_or_admin?(comment.user) %>
+          <%= link_to "Delete", article_comment_path(comment), method: :delete, class: "delete-link",
+                      data: { confirm: "Are you sure you want to delete this comment?"} %>
+        <%end %>
+      </div>
+    </li>
+<% end %>
+</ol>

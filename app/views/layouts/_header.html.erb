@@ -1,0 +1,46 @@
+<div class="jumbotron-fluid">
+  <p id="header" class="text-center text-truncate">JON SNOW IS DUMB</p>
+  <p id="addendum" class="text-center text-truncate">(and so is the rest of his family)</p>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+
+      <li class="nav-item">
+        <%= link_to "HOME", root_path, class: "nav-link"%>
+      </li>
+
+      <li class="nav-item">
+        <%= link_to "ABOUT", about_path, class: "nav-link"%>
+      </li>
+
+      <li class="nav-item">
+        <%= link_to "PROJECTS", projects_path, class: "nav-link"%>
+      </li>
+
+      <% if logged_in? %>
+        <li class="nav-item">
+          <%= link_to "PROFILE", edit_user_path(current_user), class: "nav-link"%>
+        </li>
+        <li class="nav-item">
+          <%= link_to "LOG-OUT", logout_path, method: :delete, class: "nav-link"%>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to "LOG-IN", login_path, class: "nav-link"%>
+        </li>
+      <%end %>
+    </ul>
+    <%= form_with url: articles_path, class: "form-inline my-2 my-lg-0", id: "search-bar", local:true, method: :get do |f| %>
+      <%= f.text_field params[:search], name: 'search', class: "form-control mr-sm-2", id: "search-input",
+                         placeholder: "SEARCH STUFF" %>
+      <%= f.submit value: "Search", name: "commit", id: "search-button", class: "btn btn-outline-dark my-2 my-sm-0",
+                   data: { disable_with: "Search" }%>
+    <% end %>
+  </div>
+</nav>
+

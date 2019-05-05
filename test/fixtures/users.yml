@@ -1,0 +1,28 @@
+test_user:
+  username: test_user
+  email: test@user.com
+  password_digest: <%= User.digest('password') %>
+  admin: true
+  activated: true
+  activated_at: <%= Time.zone.now %>
+  reset_digest: <%= User.digest('reset_token') %>
+  reset_sent_at: <%= Time.zone.now %>
+
+della_user:
+  username: della
+  email: della@della.com
+  password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+  reset_digest: <%= User.digest('reset_token') %>
+  reset_sent_at: <%= Time.zone.now %>
+
+inactive_user:
+  username: maxine
+  email: maxine@maxine.com
+  password_digest: <%= User.digest('password') %>
+  activated: false
+  activated_at: nil
+  activation_digest: <%= User.digest('activation') %>
+  reset_digest: <%= User.digest('reset_token') %>
+  reset_sent_at: <%= Time.zone.now %>

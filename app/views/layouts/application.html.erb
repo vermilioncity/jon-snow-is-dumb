@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <title><%= full_title(yield(:title)) %></title>
+
+  <%= csrf_meta_tags %>
+
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <%= render 'layouts/shim' %>
+
+</head>
+
+<body>
+
+<%= render 'layouts/header' %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-9 col-xs-offset-1">
+      <% flash.each do |name, msg| %>
+        <div class='alert alert-<%= "#{name}" %>'>
+          <a href="#" class="close" data-dismiss="alert">&#215;</a>
+          <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <%= yield %>
+</div>
+
+<div class="container">
+<%= render 'layouts/footer' %>
+</div>
+</body>
+
+</html>

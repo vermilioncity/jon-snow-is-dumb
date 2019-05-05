@@ -1,0 +1,147 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+$gray-medium-light: #eaeaea;
+
+
+/* debug */
+@mixin box_sizing {
+
+  -moz-box-sizing:      border-box;
+
+  -webkit-box-sizing:   border-box;
+
+  box-sizing:           border-box;
+
+}
+
+.debug_dump {
+
+  clear: both;
+
+  float: left;
+
+  width: 100%;
+
+  margin-top: 45px;
+
+  @include box_sizing;
+
+}
+
+/* forms */
+
+.centered-form {
+
+  input, textarea, select, .uneditable-input {
+
+    border: 1px solid #bbb;
+    width: 100%;
+    margin-bottom: 15px;
+
+    @include box_sizing;
+
+  }
+
+  input {
+
+    height: auto !important;
+    margin-bottom: 5px !important;
+
+  }
+
+  input, label {
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  #checkbox-label {
+    margin-left: 20px;
+    font-weight: normal;
+    vertical-align: middle;
+    float: top;
+  }
+
+  .checkbox {
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+
+  #session_remember_me {
+    width: 5%;
+    float: left;
+    vertical-align: middle;
+    margin: 0px 0px 0px 0px !important;
+  }
+
+}
+
+#signup_prompt {
+  text-align: center;
+  margin-top: 5px;
+}
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+
+  @extend .has-error;
+
+  .form-control {
+
+    color: $state-danger-text;
+
+  }
+
+}
+
+/* titles */
+body > div.container > h1 {
+  text-align: center;
+  font-family: 'Gloria Hallelujah', cursive;
+  margin-bottom: 10px;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+}
+
+/* images */
+.side-avatar {
+  float: left;
+  margin-right: 20px;
+  text-align: center;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+/* pagination */
+.pagination {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.inner {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.panel-body {
+  padding-bottom: 0px!important
+}
+
+/* links */
+.delete-link {
+  font-family: 'Gloria Hallelujah', cursive;
+  margin-left: 2px;
+}
+
+html, body {
+  margin: 0;
+  width: 100%;
+  min-width: 100vw;
+}

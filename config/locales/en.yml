@@ -1,0 +1,6 @@
+en:
+  user_mailer:
+    account_activation:
+      subject: "Activate your account at jonsnowisdumb.com"
+    password_reset:
+      subject: "Reset your password for jonsnowisdumb.com"
