@@ -1,4 +1,4 @@
-class PictureUploader < CarrierWave::Uploader::Base
+class AvatarUploader < CarrierWave::Uploader::Base
 
   def store_dir
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}/"

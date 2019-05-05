@@ -12,6 +12,9 @@ Rails.application.routes.draw do
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
 
+  get '/nielsenhouse', to: 'galleries#new'
+  post '/nielsenhouse', to: 'galleries#create'
+
   post '/edit', to: 'users#edit'
 
   get "/404", to: "errors#not_found"
@@ -22,6 +25,10 @@ Rails.application.routes.draw do
   resources :account_activations, only: [:edit]
   resources :password_resets, only:[:new, :create, :edit, :update]
   resources :articles do
+    resources :comments, only: [:create, :destroy, :update]
+  end
+
+  resources :galleries do
     resources :comments, only: [:create, :destroy, :update]
   end
 

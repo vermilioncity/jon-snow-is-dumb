@@ -9,7 +9,7 @@ class User < ApplicationRecord
   before_save :downcase_email
   before_create :create_activation_digest
 
-  mount_uploader :avatar, PictureUploader
+  mount_uploader :avatar, AvatarUploader
   validate :avatar_size
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
@@ -87,7 +87,7 @@ class User < ApplicationRecord
 
   def avatar_size
     if avatar.size > 5.megabytes
-      errors.add(:picture, "should be less than 5MB")
+      errors.add(:avatar, "should be less than 5MB")
     end
   end
 
