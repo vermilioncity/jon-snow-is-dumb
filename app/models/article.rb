@@ -9,8 +9,8 @@ class Article < ActiveRecord::Base
 
   def self.list_articles(search)
     if search.present?
-      search = "%#{search.downcase}%"
-      Article.where('content LIKE ?', search).or(Article.where('title LIKE ?', search))
+      search = "%#{search}%"
+      Article.where('content ILIKE ?', search).or(Article.where('title ILIKE ?', search))
     else
       Article.all
     end
