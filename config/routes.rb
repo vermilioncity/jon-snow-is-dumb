@@ -12,8 +12,8 @@ Rails.application.routes.draw do
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
 
-  get '/nielsenhouse', to: 'galleries#new'
-  post '/nielsenhouse', to: 'galleries#create'
+  get '/nielsenhouse', to: 'pictures#new'
+  post '/nielsenhouse', to: 'pictures#create'
 
   post '/edit', to: 'users#edit'
 
@@ -28,7 +28,7 @@ Rails.application.routes.draw do
     resources :comments, only: [:create, :destroy, :update]
   end
 
-  resources :galleries do
+  resources :pictures do
     resources :comments, only: [:create, :destroy, :update]
   end
 
