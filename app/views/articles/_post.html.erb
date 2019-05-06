@@ -20,7 +20,7 @@
       <% if full_post %>
         <%= formatted_content %>
       <% else %>
-        <%= truncate(formatted_content, length: 1000, escape: false) { link_to "Continue", "articles/#{article.id}" }%>
+        <%= truncate(formatted_content, length: 1000, escape: false) { link_to "Continue", "articles/#{article.slug}" }%>
       <% end %>
     </div>
 </li>
