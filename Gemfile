@@ -17,7 +17,7 @@ gem 'jquery-rails', '4.3.3'
 gem 'invisible_captcha'
 gem 'mini_magick', '4.9.3'
 gem 'mini_racer', platforms: :ruby
-gem 'pg', '1.1.4'
+gem 'pg', '~> 0.21'
 gem 'popper', '0.5.0'
 gem 'puma', '~> 3.11'
 gem 'rails', '~> 5.2.2', '>= 5.2.2.1'

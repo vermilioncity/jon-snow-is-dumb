@@ -1,0 +1,9 @@
+<p>A wild post on jonsnowisdumb.com has appeared!  To read <%= @article.title %>, click here: <%= link_to "here", article_url(@article) %></p>
+
+<p>A brief intro:</p>
+
+<p><b><%= @article.title %></b></p>
+<p></p>
+<p><i><%= simple_format(truncate(@article.content, length: 1000, escape: false)) %></i></p>
+
+<p>Cheers!</p>

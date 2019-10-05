@@ -1,0 +1,11 @@
+A wild post on jonsnowisdumb.com has appeared!  To read, just click the link below:
+
+<%= link_to @article.title, article_url(@article) %>
+
+A brief intro:
+
+<%= @article.title %>
+
+<%= simple_format(truncate(@article.content, length: 1000, escape: false)) %>
+
+Cheers!
