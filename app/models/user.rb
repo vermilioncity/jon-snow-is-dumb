@@ -81,6 +81,10 @@ class User < ApplicationRecord
     UserMailer.password_reset(self).deliver_now
   end
 
+  def send_new_post_notification(article)
+    UserMailer.send_new_post_notification(self, article).deliver_now
+  end
+
   def password_reset_expired?
     reset_sent_at < 2.hours.ago
   end
