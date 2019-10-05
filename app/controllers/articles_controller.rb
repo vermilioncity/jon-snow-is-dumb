@@ -10,6 +10,7 @@ class ArticlesController < ApplicationController
     @article = current_user.articles.build(article_params)
     if @article.save
       flash[:success] = 'Article posted!'
+      send_update(@article)
       redirect_to article_path(@article)
     else
       render 'new'
@@ -54,5 +55,9 @@ class ArticlesController < ApplicationController
 
     def set_article
       @article = Article.friendly.find(params[:id])
+    end
+
+    def send_update(article)
+      User.all.each { |user| user.send_new_post_notification(article)}
     end
 end
