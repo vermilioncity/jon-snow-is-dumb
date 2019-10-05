@@ -16,4 +16,12 @@ class UserMailerPreview < ActionMailer::Preview
 
   end
 
+  # Preview this email at http://localhost:3000/rails/mailers/user_mailer/send_post_notification
+  def send_post_notification
+    user = User.first
+    article = Article.first
+    UserMailer.send_new_post_notification(user, article)
+
+  end
+
 end
