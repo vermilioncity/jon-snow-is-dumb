@@ -19,7 +19,7 @@ gem 'mini_magick', '4.9.3'
 gem 'mini_racer', platforms: :ruby
 gem 'pg', '~> 0.21'
 gem 'popper', '0.5.0'
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 4.3'
 gem 'rails', '~> 5.2.2', '>= 5.2.2.1'
 gem 'sassc', '2.0.1'
 gem 'simplecov', require: false, group: :test
